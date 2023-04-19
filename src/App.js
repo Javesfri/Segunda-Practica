@@ -18,6 +18,7 @@ import MongoStore from 'connect-mongo'
 import bodyParser from 'body-parser'
 import passport from 'passport';
 import initializePassport from './config/passport.js'
+import cookieParser from 'cookie-parser';
 
 
 const app = express();
@@ -81,6 +82,7 @@ app.use(session({
 //Middlewares
 app.use(express.json());
 //app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser(process.env.COOCKE_SECRET))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 app.engine("handlebars", engine());
