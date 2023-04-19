@@ -1,0 +1,18 @@
+<h1>Register</h1>
+
+<form action="/user/register" method="post">
+    <label for="first-name">Nombre: </label>
+    <input type="text" name="first_name" required>
+    <label for="last-name">Apellido: </label>
+    <input type="text" name="last_name" required>
+    <label for="email">Email: </label>
+    <input type="text" name="email" required> 
+    <label for="age">Edad: </label>
+    <input type="number" name="age" required>
+    <label for="password">Password: </label>
+    <input type="text" name="password" required>
+    <input type="submit" value="Registrarse">
+    <a href="http://localhost:8080/api/session/login">Login</a>
+</form>
+
+<a href="/authSession/github">Registrarse con GitHub</a>

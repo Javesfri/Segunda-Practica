@@ -1,0 +1,28 @@
+<h1>Productos en Tiempo Real</h1>
+<table id="tableProduct">
+    <th>Producto</th>
+    <th>Descripcion</th>
+    <th>Precio</th>
+    <th>Code</th>
+    <th>Stock</th>
+</table>
+<div class="contenedor-form">
+  <h3>Agregar Productos</h3>  
+  <form>
+    <label for="productName">Producto: </label>
+    <input type="text" id="productName"  required="required"/>
+    <label for="productDescription">Descripcion: </label>
+    <input type="text" id="productDescription"  required="required" />
+    <label for="productPrice">Precio: </label>
+    <input type="text" id="productPrice"  required="required"/>
+    <label for="productImage">Imagen: </label>
+    <input type="text" id="productImage"  required="required"/>
+    <label for="productCode">Code: </label>
+    <input type="text" id="productCode"  required="required"/>
+    <label for="productStock">Stock: </label>
+    <input type="text" id="productStock"  required="required"/>
+    <button id="botonSubmit" type="submit">Agregar Producto</button>
+  </form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js" integrity="sha512-xbQU0+iHqhVt7VIXi6vBJKPh3IQBF5B84sSHdjKiSccyX/1ZI7Vnkt2/8y8uruj63/DVmCxfUNohPNruthTEQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/main.js"></script>

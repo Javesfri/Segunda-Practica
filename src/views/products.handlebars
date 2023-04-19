@@ -1,0 +1,35 @@
+<div class="container">
+  <h1 class="tituloProducto">Productos</h1>
+  <h2>Bienvenido {{mail}}</h2>
+  <h3>Rol: {{rol}}</h3>
+  <a
+    class="logout-login"
+    href="http://localhost:8080/api/session/logout/"
+  >Logout</a>
+  <div class="products-container">
+    {{#each products}}
+      <div class="product-container">
+        <div class="title-container"><h3 class="title">{{this.title}}</h3></div>
+        <div class="image-container"><img
+            class="image"
+            src="{{this.imagen}}"
+            alt=""
+          /></div>
+        <div class="description-container"><p
+            class="description"
+          >{{this.description}}</p></div>
+        <div class="price-stock-container"><div class="price-container"><p
+              class="price"
+            >${{this.price}}</p></div><div class="stock-container"><p
+              class="stock-container"
+            >Stock: {{this.stock}}</p></div></div>
+        <div class="add-cart-container"> <a href="">Agregar Al Carrito</a></div>
+      </div>
+    {{/each}}
+  </div>
+  <div class="page-container">
+    {{#each pages}}
+        <div class="page-button"><a class="page-link" href="http://localhost:8080/api/products?page={{this.page}}">{{this.page}}</a></div>
+    {{/each}}
+  </div>
+</div>
